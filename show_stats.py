@@ -11,5 +11,10 @@ plt.rcParams['figure.dpi'] = 120
 # P.S. would love to make it interactive.😉
 pd_stat = pd.read_csv("data.csv")
 
-pd_stat.plot()
+if len(pd_stat) >= 5:
+    to_plt = pd_stat.iloc[(len(pd_stat)-5):]
+    to_plt.plot(x="Date", y="Sessions", rot=0, kind="bar")
+else:
+    pd_stat.plot(x="Date", y="Sessions", rot=0, kind="bar")
+
 plt.show()
