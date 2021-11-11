@@ -4,6 +4,7 @@ import os
 import re
 from time import sleep
 from notifypy import Notify
+import add_sessions
 
 clear = lambda: os.system("clear")
 alarm_clock = "/home/prabesh/scripts/pomodoro/alarm_clock.mp3"
@@ -48,6 +49,7 @@ if 1 < len(sys.argv) < 3:
     set_break = re.split(r"\+", set_time)[1]
     # Then start the session
     timer(set_session, "Session")
+    add_sessions.update_or_add_pomodoro_count()
     # Prompt user for break
     print("Start Break(type yes, or no): ")
     ans = input()
