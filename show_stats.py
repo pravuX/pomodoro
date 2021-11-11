@@ -13,8 +13,8 @@ pd_stat = pd.read_csv("data.csv")
 
 if len(pd_stat) >= 5:
     to_plt = pd_stat.iloc[(len(pd_stat)-5):]
-    to_plt.plot(x="Date", y="Sessions", rot=0, kind="bar")
+    to_plt.plot(x="Date", y="Sessions", rot=0, kind="bar", ylabel="No. of sessions")
 else:
-    pd_stat.plot(x="Date", y="Sessions", rot=0, kind="bar")
+    pd_stat.plot(x="Date", y="Sessions", rot=0, kind="bar", ylabel="No. of sessions")
 
 plt.show()
