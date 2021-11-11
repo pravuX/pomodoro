@@ -1,2 +1,2 @@
 # pomodoro
-Pomodoro timer in python with alarm and csv based history
+cli pomodoro timer written in python with alarm, notification and csv based history keeping. Uses pandas, matplotlib, notify-py and relies on mpv for playing the alarm sound 🙇
