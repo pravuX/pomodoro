@@ -7,7 +7,7 @@ from notifypy import Notify
 import add_sessions
 
 clear = lambda: os.system("clear")
-alarm_clock = "/home/prabesh/scripts/pomodoro/alarm_clock.mp3"
+alarm_clock = "alarm_clock.mp3"
 # --really-quiet flag is passed to keep the terminal clean
 play = lambda: os.system(f"mpv --really-quiet {alarm_clock}")
 
